@@ -1,0 +1,691 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- xxx Basics xxx -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- xxx Change With Your Information xxx -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no" />
+    <title>PetHund - Animals Shop & Veterinary HTML Template</title>
+    <meta name="author" content="Mannat Studio">
+    <meta name="description"
+        content="PetHund is a Responsive HTML5 Template for Animals Shop & Veterinary related services.">
+    <meta name="keywords"
+        content="PetHund, animal care, cats, Dog grooming, dogs, pet, pet care, pet center, pet services, pet shelter, pet shop, shelter, vet clinic, vet store, veterinarian, veterinary">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico">
+
+
+    <!-- Main Style CSSS -->
+    <link href="assets/css/theme-plugins.min.css" rel="stylesheet">
+    <!-- Main Theme CSS -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <!-- Responsive Theme CSS -->
+    <link href="assets/css/responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+
+    <!-- Page loader Start -->
+    <div id="pageloader">
+        <div class="loader-item">
+            <div class="loader-item-content">
+                <i class="icofont-paw"></i>
+            </div>
+        </div>
+    </div>
+    <!-- Page loader End -->
+
+    <b class="screen-overlay"></b>
+
+    <header class="wow fadeInDown header-anim">
+        <div class="top-bar-right d-flex align-items-center text-md-left">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col d-flex align-items-center contact-info">
+                        <div>
+                            <i data-feather="map-pin"></i> Pet Street 123 - New York
+                        </div>
+                        <div>
+                            <i data-feather="mail"></i> <a href="mailto:email@yoursite.com">email@yoursite.com</a>
+                        </div>
+                        <div>
+                            <i data-feather="smartphone"></i> <a href="tel:(123)456789">(123) 456-789</a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-auto">
+                        <div class="social-icons">
+                            <span>We are social</span>
+                            <a href="#"><i data-feather="facebook"></i></a>
+                            <a href="#"><i data-feather="twitter"></i></a>
+                            <a href="#"><i data-feather="instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Navigation Start -->
+        <nav class="navbar navbar-expand-lg header-fullpage">
+            <div class="container">
+                <a class="navbar-brand mr-auto mr-lg-0" href="#">
+                    <img src="assets/images/logo_dark.svg" alt="">
+                </a>
+                <div class="d-inline-flex request-btn order-lg-last col-auto p-0">
+                    <a class="nav-link ml-auto" href="#" id="search_home"><i data-feather="search"></i></a>
+                    <a class="nav-link ml-auto" href="#" id="shopping-bag" data-trigger="#card_mobile"><i data-feather="shopping-bag"></i> <span class="badge badge-success">0</span></a>
+
+                    <!-- Toggle Button Start -->
+                    <button class="navbar-toggler x collapsed" type="button" data-toggle="collapse"
+                        data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!-- Toggle Button End -->
+                </div>
+            
+                <div class="navbar-collapse">
+                    <!-- Mobile Logo -->
+                    <div class="offcanvas-header">
+                        <a href="index.html" class="logo-small">
+                            <img src="assets/images/logo_white.svg" alt="">
+                        </a>                        
+                    </div>
+                    <!-- Mobile Logo -->
+                    <!-- Mobile Menu -->
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle-mob" href="index.html" id="dropdown03"
+                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Home <i
+                                        class="icofont-thin-down"></i></a>
+                                <ul class="dropdown-menu" aria-labelledby="dropdown03">
+                                    <li><a class="dropdown-item" href="index.html">Home Main</a></li>
+                                    <li><a class="dropdown-item" href="home-shop.html">Home Shop</a></li>
+                                    <li><a class="dropdown-item" href="home-vet.html">Home Vet</a></li>
+                                    <li><a class="dropdown-item" href="home-intro.html">Home Intro</a></li>
+                                    <li><a class="dropdown-item" href="home-classic.html">Home Classic</a></li>
+                                    <li><a class="dropdown-item" href="index-onepage.html">Home One Page</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown megamenu">
+                                <a href="#" class="nav-link dropdown-toggle-mob" id="dropdown04"
+                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages <i class="icofont-thin-down"></i></a>
+                                <div class="menu-back-div dropdown-menu megamenu-content" role="menu" aria-labelledby="dropdown04">
+                                    <div class="megamenu-content-wrap">
+                                        <ul class="list-unstyled">
+                                            <li><a class="dropdown-item" href="about.html">About Us</a></li>
+                                            <li><a class="dropdown-item" href="our-team.html">Our Team</a></li>
+                                            <li><a class="dropdown-item" href="team-single.html">Team Single</a></li>                                        
+                                            <li><a class="dropdown-item" href="our-faqs.html">Our Faq's</a></li>
+                                            <li><a class="dropdown-item" href="404.html">Error 404</a></li>
+                                        </ul>
+                                        <ul class="list-unstyled">
+                                            <li><a class="dropdown-item" href="our-services.html">Services</a></li>
+                                            <li><a class="dropdown-item" href="services-single.html">Services Single</a></li>                                        
+                                            <li><a class="dropdown-item" href="shortcodes-element.html">Elements Page 1</a></li>
+                                            <li><a class="dropdown-item" href="shortcodes-element-alt.html">Elements Page 2</a></li>
+                                            <li><a class="dropdown-item" href="typography.html">Typography</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle-mob" href="index.html" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Gallery <i class="icofont-thin-down"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="gallery-2-col.html">Galley 2 Col</a></li>
+                                    <li><a class="dropdown-item" href="gallery-3-col.html">Galley 3 Col</a></li>
+                                    <li><a class="dropdown-item" href="gallery-4-col.html">Galley 4 Col</a></li>
+                                    <li><a class="dropdown-item" href="gallery-single.html">Galley Single</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle-mob" href="index.html" id="blog-menu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Blog <i class="icofont-thin-down"></i></a>
+    
+                                <ul class="dropdown-menu" aria-labelledby="blog-menu">
+                                    <li><a class="dropdown-item" href="blog-classic.html">Blog Classic</a></li>
+                                    <li><a class="dropdown-item" href="blog-modern.html">Blog Modern</a></li>
+                                    <li><a class="dropdown-item" href="blog-grid.html">Blog Grid</a></li>
+                                    <li><a class="dropdown-item" href="blog-single.html">Blog Single</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle-mob" href="index.html" data-bs-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">Shop <i class="icofont-thin-down"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="shop-sidebar.html">Shop Sidebar</a></li>
+                                    <li><a class="dropdown-item" href="shop-wide.html">Shop Wide</a></li>
+                                    <li><a class="dropdown-item" href="shop-single.html">Shop Single</a></li>
+                                    <li><a class="dropdown-item" href="shop-cart.html">Shopping Cart</a></li>
+                                    <li><a class="dropdown-item" href="shop-checkout.html">Checkout</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact-us.html">Contact</a>
+                            </li>
+                        </ul>                        
+                    </div>
+                    <!-- Mobile Menu -->
+                    <div class="close-nav"></div>                
+                </div>
+            </div>
+            
+        </nav>
+        <!-- Main Navigation End -->
+    </header>
+
+    <article class="card mobile-offcanvas offcanvas-right" id="card_mobile">
+        <div class="shop-sidebar">
+            <div class="offcanvas-header">  
+                <button class="btn btn-close"> <i data-feather="x-circle"></i> </button>
+            </div>
+            <h3 class="head">My Cart</h3>
+            <ul class="list-unstyled">
+                <li>
+                    <img src="assets/images/shop/sidebar_shop_1.jpg" alt="">
+                    <div>
+                        <h4><a href="shop-single.html">Lounger Dog Bed</a></h4>
+                        <h6>$85</h6>
+                    </div>
+                    <div class="delete-btn">
+                        <a href="#"><i class="icofont-close-line"></i></a>
+                    </div>
+                </li>
+                <li>
+                    <img src="assets/images/shop/sidebar_shop_2.jpg" alt="">
+                    <div>
+                        <h4><a href="shop-single.html">Sara's Doggie Treat</a></h4>
+                        <h6>$45</h6>
+                    </div>
+                    <div class="delete-btn">
+                        <a href="#"><i class="icofont-close-line"></i></a>
+                    </div>
+                </li>
+            </ul>
+            <div class="sidebar-subtotal">
+                <span>Subtotal</span> 
+                <strong>$130</strong>
+            </div>
+            <div class="btn-holder">
+                <div class="col">
+                    <a href="shop-cart.html" class="btn-theme bordered bg-navy-blue btn-sm btn-block">View Cart</a>
+                </div>
+                <div class="col">
+                    <a href="shop-checkout.html" class="btn-theme bg-orange btn-shadow btn-sm btn-block">Checkout</a>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!-- Page Breadcrumbs Start -->
+    <section class="breadcrumbs-page-wrap">        
+        <div class="bg-navy-blue bg-fixed pos-rel breadcrumbs-page">
+            <img class="ptt-png" src="assets/images/Dot-Shape.png" alt="png">
+            <div class="container">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Typography</li>
+                    </ol>
+                </nav>
+                <h1>Typography</h1>
+            </div>
+        </div>
+    </section>
+    <!-- Page Breadcrumbs End -->
+
+    <!-- Main Body Content Start -->
+    <main id="body-content">
+    
+        <!-- Default Heading Start -->
+        <section class="wide-tb-100 pb-0">
+            <div class="container pos-rel">
+                <div class="row">
+    
+                    <div class="col-md-6">
+                        <div class="fw-7 txt-orange mb-4 typo-head">Headings</div>
+    
+                        <div class="row">
+                            <!-- Heading H1 -->
+                            <div class="col-sm-6">
+                                <h1>Heading H1</h1>
+                                <p>Mauris at ultricies eros. Morbi vel dui nec arcu suscipit euismod. Phasellus pellentesque
+                                    lectus eget quam ullamcorper consectetur.</p>
+                            </div>
+                            <!-- Heading H1 -->
+    
+                            <!-- Heading H2 -->
+                            <div class="col-sm-6">
+                                <h2>Heading H2</h2>
+                                <p>Mauris at ultricies eros. Morbi vel dui nec arcu suscipit euismod. Phasellus pellentesque
+                                    lectus eget quam ullamcorper consectetur.</p>
+                            </div>
+                            <!-- Heading H2 -->
+    
+                            <!-- Heading H3 -->
+                            <div class="col-sm-6">
+                                <h3 class="txt-blue">Heading H3</h3>
+                                <p>Mauris at ultricies eros. Morbi vel dui nec arcu suscipit euismod. Phasellus pellentesque
+                                    lectus eget quam ullamcorper consectetur.</p>
+                            </div>
+                            <!-- Heading H2 -->
+    
+                            <!-- Heading H4 -->
+                            <div class="col-sm-6">
+                                <h4>Heading H4</h4>
+                                <p>Mauris at ultricies eros. Morbi vel dui nec arcu suscipit euismod. Phasellus pellentesque
+                                    lectus eget quam ullamcorper consectetur.</p>
+                            </div>
+                            <!-- Heading H2 -->
+    
+                            <!-- Heading H5 -->
+                            <div class="col-sm-6">
+                                <h5>Heading H5</h5>
+                                <p>Mauris at ultricies eros. Morbi vel dui nec arcu suscipit euismod. Phasellus pellentesque
+                                    lectus eget quam ullamcorper consectetur.</p>
+                            </div>
+                            <!-- Heading H2 -->
+    
+                            <!-- Heading H6 -->
+                            <div class="col-sm-6">
+                                <h6>Heading H6</h6>
+                                <p>Mauris at ultricies eros. Morbi vel dui nec arcu suscipit euismod. Phasellus pellentesque
+                                    lectus eget quam ullamcorper consectetur.</p>
+                            </div>
+                            <!-- Heading H2 -->
+    
+                        </div>
+                    </div>
+    
+                    <div class="col-md-6">
+    
+                        <div class="fw-7 txt-orange mb-4 typo-head">Others Heading</div>
+                        <div class="page-header">
+                            <h1>Morbi vel dui nec arcu suscipit euismod. <small class="txt-ligt-gray">Subtext for header</small></h1>
+                        </div>
+                        <p class="lead">Mauris at ultricies eros. Morbi vel dui nec arcu suscipit euismod. Phasellus
+                            pellentesque lectus eget quam ullamcorper consectetur. Suspendisse sed turpis non nulla auctor
+                            posuere. Nulla ut libero tortor. Nam tortor metus, accumsan in tincidunt a, aliquam vitae diam.
+                        </p>
+                        <small>Mauris at ultricies eros. Morbi vel dui nec arcu suscipit euismod. Phasellus pellentesque
+                            lectus eget quam ullamcorper consectetur. Suspendisse sed turpis non nulla auctor posuere. Nulla
+                            ut libero tortor. Nam tortor metus, accumsan in tincidunt a, aliquam vitae diam. </small>
+                    </div>
+    
+                </div>
+    
+            </div>
+        </section>
+        <!-- Default Heading End -->
+    
+        <!-- Default Grid Start -->
+        <section class="wide-tb-100 pb-0">
+            <div class="container pos-rel">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="fw-7 txt-orange mb-4 typo-head">Default Grid System</div>
+                        <div class="bs-docs-grid">
+                            <div class="show-grid row">
+                                <div class="col-md-1 mb-0"><span>.col-md-1</span></div>
+                                <div class="col-md-1 mb-0"><span>.col-md-1</span></div>
+                                <div class="col-md-1 mb-0"><span>.col-md-1</span></div>
+                                <div class="col-md-1 mb-0"><span>.col-md-1</span></div>
+                                <div class="col-md-1 mb-0"><span>.col-md-1</span></div>
+                                <div class="col-md-1 mb-0"><span>.col-md-1</span></div>
+                                <div class="col-md-1 mb-0"><span>.col-md-1</span></div>
+                                <div class="col-md-1 mb-0"><span>.col-md-1</span></div>
+                                <div class="col-md-1 mb-0"><span>.col-md-1</span></div>
+                                <div class="col-md-1 mb-0"><span>.col-md-1</span></div>
+                                <div class="col-md-1 mb-0"><span>.col-md-1</span></div>
+                                <div class="col-md-1 mb-0"><span>.col-md-1</span></div>
+                            </div>
+                            <div class="show-grid row">
+                                <div class="col-md-6 mb-0"><span>.col-md-6</span></div>
+                                <div class="col-md-6 mb-0"><span>.col-md-6</span></div>
+                            </div>
+                            <div class="show-grid row">
+                                <div class="col-md-4 mb-0"><span>.col-md-4</span></div>
+                                <div class="col-md-4 mb-0"><span>.col-md-4</span></div>
+                                <div class="col-md-4 mb-0"><span>.col-md-4</span></div>
+                            </div>
+                            <div class="show-grid row">
+                                <div class="col-md-3 mb-0"><span>.col-md-3</span></div>
+                                <div class="col-md-3 mb-0"><span>.col-md-3</span></div>
+                                <div class="col-md-3 mb-0"><span>.col-md-3</span></div>
+                                <div class="col-md-3 mb-0"><span>.col-md-3</span></div>
+                            </div>
+                            <div class="show-grid row">
+                                <div class="col-md-3 mb-0"><span>.col-md-3</span></div>
+                                <div class="col-md-6 mb-0"><span>.col-md-6</span></div>
+                                <div class="col-md-3 mb-0"><span>.col-md-3</span></div>
+                            </div>
+                            <div class="show-grid row">
+                                <div class="col-md-9 mb-0"><span>.col-md-9</span></div>
+                                <div class="col-md-3 mb-0"><span>.col-md-3</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+        </section>
+        <!-- Default Grid End -->
+    
+        <!-- Text Aligments Start -->
+        <section class="wide-tb-100 pb-0">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="fw-7 txt-orange mb-4 typo-head">Text Aligments</div>
+                        <p class="text-left">Left aligned text.</p>
+                        <p class="text-center">Center aligned text.</p>
+                        <p class="text-right">Right aligned text.</p>
+                        <p class="text-justify">
+                            <strong>Justified text</strong>
+                            <br>
+                            Consequat te olim letalis premo ad hos olim odio olim indoles ut venio iusto. Euismod, sagaciter
+                            diam neque antehabeo blandit, jumentum transverbero luptatum. Lenis vel diam praemitto molior
+                            facilisi facilisi suscipere abico, ludus, at.
+                        </p>
+    
+                    </div>
+                    <div class="col-md-6">
+                        <div class="fw-7 txt-orange mb-4 typo-head">Emphasis Classes</div>
+                        <p class="text-muted">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p>
+                        <p class="text-primary">Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                        <p class="text-success">Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
+                        <p class="text-info">Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+                        <p class="text-warning">Etiam porta sem malesuada magna mollis euismod.</p>
+                        <p class="text-danger">Donec ullamcorper nulla non metus auctor fringilla.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="fw-7 txt-orange mb-4 typo-head">Addresses</div>
+                        <!--Addresses-->
+                        <address>
+                            <strong>Twitter, Inc.</strong><br>
+                            795 Folsom Ave, Suite 600<br>
+                            San Francisco, CA 94107<br>
+                            <abbr title="Phone">P:</abbr> (123) 456-7890
+                        </address>
+    
+                        <address>
+                            <strong>Full Name</strong><br>
+                            <a href="mailto:#">first.last@example.com</a>
+                        </address>
+                        <!--Addresses-->
+    
+                    </div>
+
+                    <div class="col-md-6">    
+                        <!--Abbreviation-->
+                        <div class="fw-7 txt-orange mb-4 typo-head">Abbreviation</div>
+                        <p>An abbreviation of the word attribute is <abbr title="attribute">attr</abbr> <br><abbr title="HyperText Markup Language" class="initialism">HTML</abbr> is the best thing since
+                            sliced bread.</p>
+                        <!--Abbreviation-->
+    
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Text Aligments End -->
+    
+        <!-- Blockquotes Start -->
+        <section class="wide-tb-100 pb-0">
+            <div class="container">
+                <div class="fw-7 txt-orange mb-4 typo-head">Blockquote</div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <blockquote>
+                            Omnicos directe al desirabilite de un nov lingua franca: On refusa continuar payar custosi traductores. At solmen va esser necessi far uniform grammatica
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Blockquotes End -->
+    
+        <!-- Dropcaps Start -->
+        <section class="wide-tb-100 pb-0">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-sm-12">
+                        <div class="fw-7 txt-orange mb-4 typo-head">Dropcaps</div>
+                    </div>
+                    <div class="col-sm-6 col-md-6 col-lg-4">
+                        <p><span class="dropcap">D</span>Consequat te olim letalis premo ad hos olim odio olim indoles ut
+                            venio iusto. Euismod, sagaciter diam neque antehabeo blandit, jumentum transverbero luptatum.
+                            Lenis vel diam praemitto molior facilisi facilisi suscipere abico, ludus, at.</p>
+                    </div>
+    
+                    <div class="col-sm-6 col-md-6 col-lg-4">
+                        <p><span class="dropcap2 bg-orange">D</span>Consequat te olim letalis premo ad hos olim odio olim
+                            indoles ut venio iusto. Euismod, sagaciter diam neque antehabeo blandit, jumentum transverbero
+                            luptatum. Lenis vel diam praemitto molior facilisi facilisi suscipere abico, ludus, at.</p>
+                    </div>
+    
+                    <div class="col-sm-12 col-md-12 col-lg-4 mx-auto">
+                        <p><span class="dropcap2 rounded-circle bg-navy-blue">D</span>Consequat te olim letalis premo ad hos
+                            olim odio olim indoles ut venio iusto. Euismod, sagaciter diam neque antehabeo blandit, jumentum
+                            transverbero luptatum. Lenis vel diam praemitto molior facilisi facilisi suscipere abico, ludus,
+                            at.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Dropcaps End -->
+    
+        <!-- Bullets Start -->
+        <section class="wide-tb-100">
+            <div class="container">
+    
+                <div class="row pb-4">
+                    <!-- Bullet Style Orange -->
+                    <div class="col-sm-12 col-md-4">
+                        <div class="fw-7 txt-orange mb-4 typo-head">Bullet Style</div>
+                        <ul class="list-unstyled icons-listing theme-orange mb-0">
+                            <li>Deliver Environmentally Responsible Client Services</li>
+                            <li>Be an Active Community Partner</li>
+                            <li>Drive Continuous Improvement</li>
+                            <li>Clearance and compliance service</li>
+                        </ul>
+                    </div>
+                    <!-- Bullet Style Orange -->
+    
+                    <!-- Bullet Style Paws -->
+                    <div class="col-sm-12 col-md-4">
+                        <div class="fw-7 txt-orange mb-4 typo-head">Bullet Style Paws</div>
+                        <ul class="list-unstyled icons-listing theme-light mb-0 paws">
+                            <li>Deliver Environmentally Responsible Client Services</li>
+                            <li>Be an Active Community Partner</li>
+                            <li>Drive Continuous Improvement</li>
+                            <li>Clearance and compliance service</li>
+                        </ul>
+                    </div>
+                    <!-- Bullet Style Paws -->
+    
+                    <!-- Bullet Style Dark -->
+                    <div class="col-sm-12 col-md-4">
+                        <div class="fw-7 txt-orange mb-4 typo-head">Bullet Style Dark</div>
+                        <ul class="list-unstyled icons-listing theme-dark mb-0">
+                            <li>Deliver Environmentally Responsible Client Services</li>
+                            <li>Be an Active Community Partner</li>
+                            <li>Drive Continuous Improvement</li>
+                            <li>Clearance and compliance service</li>
+                        </ul>
+                    </div>
+                    <!-- Bullet Style Dark -->
+                </div>
+            </div>
+        </section>
+        <!-- Bullets End -->
+    </main>
+    <!-- Main Footer Start -->
+    <div class="container footer-top-callout">
+        <div class="row">
+            <!-- Callout Section Side Image -->
+            <div class="col-sm-12">
+                <div class="callout-style-side-img d-lg-flex align-items-center">
+                    <div class="img-callout">
+                        <img src="assets/images/callout_side_img.jpg" alt="">
+                    </div>
+                    <div class="text-callout">
+                        <div class="d-md-flex align-items-center">
+                            <div class="icon">
+                                <i data-feather="headphones"></i>
+                            </div>
+                            <div class="heading">
+                                <h3>Have Questions? Call Us <span class="txt-green">+1 (800) 123 456 789</span>
+                                </h3>
+                                <div>In aliquet magna nec lobortis maximus. Etiam rhoncus leo a dolor placerat,
+                                    nec elementum ipsum convall.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Callout Section Side Image -->
+        </div>
+    </div>
+    <footer class="wide-tb-150 bg-navy-blue pb-0">
+        <div class="container">
+            <div class="row wide-tb-50 pt-0 align-items-center">
+                <div class="col-md-6 mb-0">
+                    <div class="logo-footer">
+                        <img src="assets/images/logo_white.svg" alt="">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="social-icons d-flex justify-content-md-end align-items-center">
+                        We are social
+                        <ul class="list-unstyled list-group list-group-horizontal">
+                            <li><a href="#"><i data-feather="twitter"></i></a></li>
+                            <li><a href="#"><i data-feather="facebook"></i></a></li>
+                            <li><a href="#"><i data-feather="instagram"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Column First -->
+                <div class="col-lg-4 col-md-6 me-auto">
+                    <h3 class="footer-heading">About PetHund</h3>
+                    <p>Simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                        scrambled it to make a type specimen book.</p>
+                </div>
+                <!-- Column First -->
+
+                <!-- Column Second -->
+                <div class="col-lg-2 col-md-6">
+                    <h3 class="footer-heading">Explore</h3>
+                    <div class="footer-widget-menu">
+                        <ul class="list-unstyled">
+                            <li><a href="about.html"><i class="icofont-simple-right"></i> <span>About Us</span></a></li>
+                            <li><a href="our-services.html"><i class="icofont-simple-right"></i> <span>Services</span></a></li>
+                            <li><a href="our-team.html"><i class="icofont-simple-right"></i> <span>Our Team</span></a></li>
+                            <li><a href="javascript:"><i class="icofont-simple-right"></i> <span>Adopt Pet</span></a></li>
+                            <li><a href="gallery-4-col.html"><i class="icofont-simple-right"></i> <span>Gallery</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Column Second -->
+
+                <!-- Column Third -->
+                <div class="col-lg-2 col-md-6">
+                    <h3 class="footer-heading">Useful links</h3>
+                    <div class="footer-widget-menu">
+                        <ul class="list-unstyled">
+                            <li><a href="our-faqs.html"><i class="icofont-simple-right"></i> <span>FAQs</span></a></li>
+                            <li><a href="javascript:"><i class="icofont-simple-right"></i> <span>Help</span></a></li>
+                            <li><a href="javascript:"><i class="icofont-simple-right"></i> <span>Privacy Policy</span></a></li>
+                            <li><a href="javascript:"><i class="icofont-simple-right"></i> <span>Terms of Use</span></a></li>
+                            <li><a href="javascript:"><i class="icofont-simple-right"></i> <span>Site Map</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Column Third -->
+
+                <!-- Column Fourth -->
+                <div class="col-lg-3 ms-auto col-md-6">
+                    <h3 class="footer-heading">Working Hours</h3>
+                    <p>Our support available to help you 24 hours a day. We provide our best.</p>
+
+                    <div class="working-hours">
+                        <ul class="list-unstyled">
+                            <li>
+                                <span class="txt-green">Mon – Fri :</span>
+                                <span class="underline">08.00 am – 20.00 PM</span>
+                            </li>
+                            <li>
+                                <span class="txt-green">Saturday :</span>
+                                <span class="underline">09.00 am – 20.00 PM</span>
+                            </li>
+                            <li>
+                                <span class="txt-green">Sunday :</span>
+                                <span class="underline">We Are Closed</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Column Fourth -->
+            </div>
+        </div>
+
+        <div class="copyright-wrap">
+            <div class="container pos-rel">
+                <div class="copyright-text">
+                    <div>Copyrights <span id="yearText"></span> <span class="txt-green">PetHund</span> All Rights Reserved.</div>
+                    <div>Designed by <a href="https://themeforest.net/user/mannatstudio" rel="nofollow">MannatStudio</a>
+                    </div>
+                </div>
+                <div class="footer-dog">
+                    <img src="assets/images/dog_footer.png" alt="">
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Main Footer End -->
+
+    <!-- Search Popup Start -->
+    <div class="overlay overlay-hugeinc">
+        <form class="form-inline mt-2 mt-md-0">
+            <div class="form-inner">
+                <div class="form-inner-div d-inline-flex align-items-center g-0">
+                    <div class="col-md-1">
+                        <i class="icofont-search"></i>
+                    </div>
+                    <div class="col-10">
+                        <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+                    </div>
+                    <div class="col-md-1">
+                        <a href="#" class="overlay-close link-oragne"><i class="icofont-close-line"></i></a>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <!-- Search Popup End -->
+
+    <!-- Back To Top Start -->
+    <a id="mkdf-back-to-top" href="#" class="off"><i class="icofont-rounded-up"></i></a>
+    <!-- Back To Top End -->
+
+    <!-- Jquery Library JS -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/theme-plugins.min.js"></script>    
+    <!-- Theme Custom FIle -->
+    <script src="assets/js/site-custom.js"></script>
+</body>
+</html>
