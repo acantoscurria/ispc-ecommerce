@@ -29,6 +29,37 @@ CREATE TABLE IF NOT EXISTS `mydb`.`usuario` (
   PRIMARY KEY (`id_usuario`))
 ENGINE = InnoDB;
 
+-- Registrarse
+DELIMITER //
+CREATE PROCEDURE registrar_usuario (
+  IN nombre TEXT,
+  IN email VARCHAR(150),
+  IN clave VARCHAR(255)
+)
+BEGIN
+  INSERT INTO usuario (nombre, email, clave)
+  VALUES (nombre, email, clave);
+END//
+DELIMITER ;
+
+-- Iniciar sesion
+DELIMITER //
+CREATE PROCEDURE iniciar_sesion (
+  IN email VARCHAR(150),
+  IN clave VARCHAR(255),
+  OUT mensaje VARCHAR(50)
+)
+BEGIN
+  DECLARE usuario_id_usuario INT;
+  SELECT id_usuario INTO usuario_id_usuario FROM usuario WHERE email = email AND clave = clave;
+  
+  IF usuario_id_usuario IS NOT NULL THEN
+    SET mensaje = 'Inicio de sesión exitoso';
+  ELSE
+    SET mensaje = 'Inicio de sesión fallido';
+  END IF;
+END//
+DELIMITER ;
 
 -- -----------------------------------------------------
 -- Table `mydb`.`cliente`
