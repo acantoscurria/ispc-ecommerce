@@ -4,7 +4,6 @@ import { PagesRoutingModule } from './pages-routing.module';
 import { HomeComponent } from './home/home.component';
 
 import { LayoutModule } from '../layout/layout.module';
-import { NavbarComponent } from '../layout/navbar/navbar.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -15,7 +14,6 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     LoginComponent,
     RegisterComponent,
     DashboardComponent,
-    // NavbarComponent
   ],
   imports: [
     CommonModule,
