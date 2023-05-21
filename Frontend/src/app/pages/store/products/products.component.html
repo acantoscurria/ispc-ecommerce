@@ -1,9 +1,10 @@
 <h1 class="text-center mt-3">Productos</h1>
 
 <div class="container mt-5">
-  <app-product></app-product>
-  <app-product></app-product>
-  <app-product></app-product>
-  <app-product></app-product>
+  <app-product
+  [product]="product"
+  *ngFor="let product of products"
+  ></app-product>
+
 </div>
 

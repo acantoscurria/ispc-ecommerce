@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ProductsService } from 'src/app/services/products.service';
 
 @Component({
   selector: 'app-products',
@@ -6,5 +7,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent {
+
+    products: any[] = [];
+
+    constructor(
+      private productsService: ProductsService
+    ) { }
+
+    ngOnInit(): void {
+      this.productsService.getProducts()
+        .subscribe((data: any) => {
+          this.products = data;
+        });
+    }
 
 }
