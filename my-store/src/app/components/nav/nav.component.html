@@ -1,6 +1,6 @@
 <div class="show-mobile">
   <div>
-    <button>
+    <button (click)="toogleMenu()">
       <img src="../../../assets/images/svg/menu.png" alt="menu">
     </button>
     <a href="">
@@ -10,6 +10,14 @@
       <img src="../../../assets/images/svg/carrito.jpg" alt="logo">
     </a>
   </div>
+  <div class="side-menu" [class.active]="activeMenu">
+    <button (click)="toogleMenu()">Close</button>
+    <ul>
+      <li><a href="">All</a></li>
+      <li><a href="">Clothes</a></li>
+      <li><a href="">Electronics</a></li>
+    </ul>
+  </div>
 </div>
 <div class="hide-mobile">
   <div>
@@ -17,11 +25,11 @@
       <a class="logo" href="">
         <img src=".../../../assets/images/svg/logo-tienda.png" alt="logo">
       </a>
-      <!-- <ul>
+      <ul>
         <li><a href="">All</a></li>
         <li><a href="">Clothes</a></li>
         <li><a href="">Electronics</a></li>
-      </ul> -->
+      </ul>
     </nav>
     <div class="info">
       <div class="account">Highsystem@gmail.com</div>

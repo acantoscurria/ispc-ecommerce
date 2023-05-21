@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-nav',
@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class NavComponent {
 
+  activeMenu = false;
+
+  constructor() { }
+
+  ngOnInit(): void{
+  }
+
+  toogleMenu(){
+    this.activeMenu = !this.activeMenu;
+  }
 }
