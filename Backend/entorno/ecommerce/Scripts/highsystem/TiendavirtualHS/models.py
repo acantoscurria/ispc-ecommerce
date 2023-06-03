@@ -1,45 +1,44 @@
 from django.db import models
 from django.contrib.auth.hashers import make_password
 from django.db.models import Max
+from django.contrib.auth.models import AbstractUser
+from django.conf import settings
+
 # Create your models here.
 
-class Usuario(models.Model):
-    id_usuario= models.AutoField(primary_key=True)
-    nombre = models.CharField(max_length=40,blank=False)
-    email = models.EmailField(max_length=100, blank=False, editable=True)
-    clave = models.CharField(max_length=8, blank=False, editable=True)
-
-    class meta:
-        db_table="Usuario"
-        verbose_name= "Usuarios disponibles"
-        verbose_name_plural= "Usuarios"
-
-    def save(self, *args, **kwargs):
-        self.clave = make_password(self.clave)
-        super().save(*args, **kwargs)
+class CustomUser(AbstractUser):
+    email = models.EmailField(max_length=150, unique=True)
+    USERNAME_FIELD = 'email'
+    REQUIRED_FIELDS = ['username', 'password']
 
 
 class Cliente(models.Model):
-    id_cliente=models.AutoField(primary_key=True)
-    id_usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE)
-    nom_usu = models.CharField(max_length=255)
+    id_cliente = models.AutoField(primary_key=True)
+    id_usuario = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    password = models.CharField(max_length=128, default='my_default_password')
     telefono = models.CharField(max_length=45, null=True,editable=True)
     direccion = models.TextField(blank=False, editable=True)
-    
+
     class meta:
         db_table="Cliente"
         verbose_name= "Tipo de usuario cliente"
         verbose_name_plural= "Clientes"
 
+
 class Administrador(models.Model):
     id_administrador=models.AutoField(primary_key=True)
-    id_usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE)
+    id_usuario = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
 
     class meta:
         db_table="Administrador"
         verbose_name= "Tipo de usuario administrador"
         verbose_name_plural= "Administradores"
 
+    
+    #def save(self, *args, **kwargs):
+     #   self.password = make_password(self.password)
+      #  super().save(*args, **kwargs)
+      #  
 class Carrito(models.Model):
     id_carrito= models.AutoField(primary_key=True)
     id_cliente = models.ForeignKey(Cliente, on_delete=models.CASCADE)
