@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-sidebar-dashboard',
@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./sidebar-dashboard.component.css']
 })
 export class SidebarDashboardComponent {
-
+  @Input() navActive :string = 'main-dashboard'
 }

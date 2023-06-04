@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-dashboard-template',
@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./dashboard-template.component.css']
 })
 export class DashboardTemplateComponent {
+  @Input() navActive :string = 'main-dashboard'
 
 }

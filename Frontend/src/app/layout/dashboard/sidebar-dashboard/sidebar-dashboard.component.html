@@ -19,9 +19,9 @@
       <i class="fas fa-fw fa-cog"></i>
       <span>Productos</span>
     </a>
-    <div id="nav-productos" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+    <div id="nav-productos" [ngClass]="{'show': navActive == 'add-product' ||navActive == 'update-product' }" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
       <div class="bg-white py-2 collapse-inner rounded">
-        <a class="collapse-item" href="#">Cargar Productos</a>
+        <a [ngClass]="{'active': navActive == 'add-product'}"  class="collapse-item" href="/dashboard/add-product">Cargar Productos</a>
         <a class="collapse-item" href="#">Modificar Productos</a>
       </div>
     </div>
@@ -36,9 +36,9 @@
       <i class="fas fa-fw fa-cog"></i>
       <span>Usuarios</span>
     </a>
-    <div id="nav-usuarios" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+    <div id="nav-usuarios" [ngClass]="{'show': navActive == 'add-user' ||navActive == 'change-user' }" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
       <div class="bg-white py-2 collapse-inner rounded">
-        <a class="collapse-item" href="#">Agregar usuario</a>
+        <a [ngClass]="{'active': navActive == 'add-user'}" class="collapse-item" href="/dashboard/add-user">Agregar usuario</a>
         <a class="collapse-item" href="#">Borrar usuario</a>
       </div>
     </div>
