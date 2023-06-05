@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PagesModule } from './pages/pages.module';
+import { TokenInterceptor } from './interceptors/token.interceptor';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,9 @@ import { PagesModule } from './pages/pages.module';
     PagesModule,
     HttpClientModule,
   ],
-  providers: [],
+  providers: [
+    TokenInterceptor
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
