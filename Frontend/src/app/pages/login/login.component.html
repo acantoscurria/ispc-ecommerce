@@ -12,19 +12,22 @@
       <hr>
       <div class="card-title col-lg-10 mx-auto">
         <p class="text-secondary mb-3">Debe iniciar sesión para acceder al sistema</p>
-        <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label text-secondary">Usuario</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-        </div>
-        <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label text-secondary">Contraseña</label>
-          <input type="password" class="form-control" id="exampleInputPassword1">
-        </div>
-        <div class="d-grid gap-2 text-center">
-          <hr>
-          <a name="" id="" class="btn btn-outline-danger" href="" role="button">Volver a Inicio</a>
-          <button type="submit" class="btn btn-primary">Iniciar sesión</button>
-        </div>
+        <form [formGroup]="loginForm" (ngSubmit)="login()">
+          <div class="mb-3">
+            <label for="email" class="form-label">Correo electrónico</label>
+            <input type="email" class="form-control" id="email" formControlName="email">
+            <div class="text-danger">{{ getErrorMessage('email') }}</div>
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Contraseña</label>
+            <input type="password" class="form-control" id="password" formControlName="password">
+            <div class="text-danger">{{ getErrorMessage('password') }}</div>
+          </div>
+          <div class="d-grid gap-2">
+            <button type="submit" class="btn btn-primary">Iniciar sesión</button>
+          </div>
+        </form>
+
       </div>
     </div>
   </div>
