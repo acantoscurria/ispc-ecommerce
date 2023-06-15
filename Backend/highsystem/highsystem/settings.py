@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'django_rest_passwordreset',
     'TiendavirtualHS',
     'highsystem',
+    'usuarios',
+    'rest_framework_simplejwt',
 ]
 
 MIDDLEWARE = [
@@ -79,17 +81,10 @@ WSGI_APPLICATION = 'highsystem.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES ={
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': "ecommercehs",
-        'USER':  'root',
-        'PASSWORD': 'antitolomas1',
-        'HOST': 'localhost',
-        'PORT': '3306',
-        'OPTIONS': {
-            'sql_mode': 'traditional',
-        }
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": "mydatabase",
     }
 }
 
@@ -116,9 +111,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es-ar'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Argentina/Buenos_Aires'
 
 USE_I18N = True
 
@@ -135,11 +130,11 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-AUTH_USER_MODEL = 'TiendavirtualHS.CustomUser'
+AUTH_USER_MODEL = 'usuarios.CustomUser'
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
-        'rest_framework.authentication.TokenAuthentication',
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
         'rest_framework.authentication.SessionAuthentication',
     ],
     'DEFAULT_PERMISSION_CLASSES': [
@@ -150,6 +145,10 @@ REST_FRAMEWORK = {
   
 }
 
-CORS_ORIGIN_WHITELIST = ["http://localhost:3000"]
+
+
+CORS_ORIGIN_WHITELIST = ["http://localhost:3000", "http://localhost:4200"]
+
 CORS_ALLOW_CREDENTIALS = True
 
+APPEND_SLASH=False

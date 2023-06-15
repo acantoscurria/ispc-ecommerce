@@ -53,7 +53,7 @@ export class LoginComponent implements OnInit {
         )
         .subscribe((data) => {
           if (data) {
-            console.log(data.access_token);
+            console.log(data.access);
           }
         });
     }

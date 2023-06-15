@@ -17,18 +17,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-from rest_framework import routers
-from TiendavirtualHS import views as vistas
-
-router = routers.DefaultRouter()
-router.register('bebidas', vistas.verBebidas, basename='Bebidas')
-router.register('categorias', vistas.verCategorias, basename='Categoria')
-router.register('carrito', vistas.verCarrito, basename='Carrito')
-router.register('pedidos', vistas.verPedido, basename='Pedido')
-
 urlpatterns = [
     path('admin/', admin.site.urls),
      # Api routes
-    path('api/', include('TiendavirtualHS.urls')),
-    path('api/', include(router.urls)),
+    path('api/tienda/', include('TiendavirtualHS.urls')),
+    path('api/usuarios/', include('usuarios.urls')),
 ]
