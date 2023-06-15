@@ -1,5 +1,5 @@
 from django.urls import path, include
-from .views import LoginView, LogoutView, SignupView, ProfileView, ListarUsuarios, agregarBebidas
+from .views import LoginView, LogoutView, SignupView, ProfileView, ListarUsuarios, agregarBebidas, customjsonybajarstock, retornarPagado
 
 urlpatterns = [
     # Auth views
@@ -24,4 +24,9 @@ urlpatterns = [
 
      path('agregarproducto/',
          agregarBebidas.as_view(), name='agregar_Bebidas'),
+
+     path('retornarPagado/',
+         retornarPagado.as_view(), name='retornarPagado'),
+
+     path('actualizarstock/<int:pk>/<int:cantidad>', customjsonybajarstock.as_view(), name='customjsonybajarstock'),
 ]
