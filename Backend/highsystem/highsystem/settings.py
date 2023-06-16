@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'highsystem',
     'usuarios',
     'rest_framework_simplejwt',
+    'drf_spectacular',
 ]
 
 MIDDLEWARE = [
@@ -141,10 +142,18 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.IsAuthenticatedOrReadOnly',
         'rest_framework.permissions.IsAuthenticated',
         'rest_framework.permissions.IsAdminUser',
-    ]
+    ],
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
   
 }
 
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'HighSystem API',
+    'DESCRIPTION': 'API para el proyecto de tecnicatura en programacion',
+    'VERSION': '1.0.0',
+    'SERVE_INCLUDE_SCHEMA': False,
+    # OTHER SETTINGS
+}
 
 
 CORS_ORIGIN_WHITELIST = ["http://localhost:3000", "http://localhost:4200"]

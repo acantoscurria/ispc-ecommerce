@@ -6,6 +6,8 @@
 *.pot
 *.pyc
 __pycache__/
+highsystem/__pycache__/
+TiendavirtualHS/highsystem/migrations/__pycache__/
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
@@ -172,3 +174,5 @@ cython_debug/
 #.idea/
 
 # End of https://www.toptal.com/developers/gitignore/api/django
+
+mydatabase
