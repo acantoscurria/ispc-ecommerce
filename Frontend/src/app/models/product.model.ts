@@ -6,12 +6,14 @@ export interface Rating {
 
 export interface Product {
   id: number;
-  title: string;
+  name: string;
   price: number;
   description: string;
   category: string;
-  image: string;
-  rating : Rating
+  image: any;
+  stock: number;
 }
+
+export interface AddProductDto extends Omit < Product, 'id' >{} ;
 
 

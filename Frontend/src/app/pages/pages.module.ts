@@ -14,6 +14,7 @@ import { ProductsComponent } from './store/products/products.component';
 import { AddProductComponent } from './dashboard/add-product/add-product.component';
 import { MainDashboardComponent } from './dashboard/main-dashboard/main-dashboard.component';
 import { AddUserComponent } from './dashboard/add-user/add-user.component';
+import { TokenInterceptor } from '../interceptors/token.interceptor';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,9 @@ import { AddUserComponent } from './dashboard/add-user/add-user.component';
     PagesRoutingModule,
     LayoutModule,
     ReactiveFormsModule,
+  ],
+  providers: [
+    TokenInterceptor
   ]
 })
 export class PagesModule { }

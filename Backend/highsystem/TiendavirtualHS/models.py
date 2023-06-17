@@ -37,11 +37,15 @@ class Bebidas(models.Model):
     id_categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)
     imagen = models.ImageField(null=True, blank=True, upload_to="bebidas/", editable=True)
     descripcion = models.TextField(null=True, blank= True, editable=True)
+    codigo = models.CharField(max_length=45, blank=False, null=True)
 
     class meta:
         db_table="Bebidas"
         verbose_name= "Producto bebida"
         verbose_name_plural= "Bebidas"
+
+    def __str__(self):
+        return self.marca
 
 class Pedido(models.Model):
     id_pedido= models.AutoField(primary_key=True)

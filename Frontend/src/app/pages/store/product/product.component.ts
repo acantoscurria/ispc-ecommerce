@@ -11,13 +11,10 @@ export class ProductComponent {
     id: 0,
     price: 0,
     image: '',
-    title: '',
+    name: '',
     category:'',
     description: '',
-    rating: {
-      count: 0,
-      rate: 0
-    }
+    stock: 0,
   };
 
 }

@@ -12,6 +12,7 @@ export class TokenService {
   }
 
   public getToken() {
+    console.log(" getToken: "+localStorage.getItem('access'))
     return localStorage.getItem('access');
   }
 

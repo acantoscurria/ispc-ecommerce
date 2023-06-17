@@ -3,6 +3,7 @@ from rest_framework import routers
 from TiendavirtualHS import views as vistas
 from django.conf.urls import include
 
+
 router = routers.SimpleRouter()
 router.register('categoria', vistas.CategoriaModelView, basename='Categoria')
 router.register('carrito', vistas.verCarrito, basename='Carrito')

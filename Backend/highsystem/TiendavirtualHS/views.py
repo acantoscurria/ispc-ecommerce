@@ -7,6 +7,7 @@ from .models import Categoria, Bebidas, Carrito, Pedido
 from rest_framework import viewsets
 
 
+
 class CategoriaModelView(viewsets.ModelViewSet):
     permission_classes = [AllowAny]
     queryset = Categoria.objects.all()
