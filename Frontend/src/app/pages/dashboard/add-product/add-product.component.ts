@@ -118,7 +118,7 @@ export class AddProductComponent {
               verticalPosition: 'bottom',
               panelClass: 'success-snackbar'
             });
-            this.router.navigate(['/login']);
+            this.router.navigate(['/dashboard/list-products/']);
           }
         }
         );

@@ -15,6 +15,7 @@ import { AddProductComponent } from './dashboard/add-product/add-product.compone
 import { MainDashboardComponent } from './dashboard/main-dashboard/main-dashboard.component';
 import { AddUserComponent } from './dashboard/add-user/add-user.component';
 import { TokenInterceptor } from '../interceptors/token.interceptor';
+import { ListProductsComponent } from './dashboard/list-products/list-products.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { TokenInterceptor } from '../interceptors/token.interceptor';
     AddProductComponent,
     MainDashboardComponent,
     AddUserComponent,
+    ListProductsComponent,
   ],
   imports: [
     CommonModule,

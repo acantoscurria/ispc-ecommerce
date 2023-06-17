@@ -9,7 +9,7 @@ import { HttpHeaders } from '@angular/common/http';
 })
 export class ProductsService {
 
-  url_api = 'http://localhost:8000/';
+  url_api = 'http://localhost:8000';
 
   constructor(
     private http: HttpClient,
@@ -41,7 +41,7 @@ export class ProductsService {
   }
 
   deleteProduct(id: number) {
-    return this.http.delete(this.url_api + '/api/tienda/bebida/' + id, this.httpOptions);
+    return this.http.delete(this.url_api + '/api/tienda/bebida/' + id +"/", this.httpOptions);
   }
 
   updateProduct(id?: number, name?: string, price?: number, category?: string, code?: string, image?: any, stock?: number) {

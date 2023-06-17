@@ -5,13 +5,14 @@ export interface Rating {
 }
 
 export interface Product {
-  id: number;
-  name: string;
-  price: number;
-  description: string;
-  category: string;
-  image: any;
+  id_bebidas: number;
+  marca: string;
+  precio: number;
+  descripcion: string;
+  id_categoria: string;
+  imagen: any;
   stock: number;
+  codigo: string;
 }
 
 export interface AddProductDto extends Omit < Product, 'id' >{} ;
