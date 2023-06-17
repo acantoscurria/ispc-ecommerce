@@ -4,6 +4,7 @@ import { ProductsService } from 'src/app/services/products.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { catchError } from 'rxjs/operators';
 import { of } from 'rxjs';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -20,6 +21,7 @@ export class AddProductComponent {
     private formBuilder: FormBuilder,
     private productService: ProductsService,
     private snackBar: MatSnackBar,
+    private router: Router
 
   ) {
     this.addProductForm = this.formBuilder.group({
@@ -65,13 +67,13 @@ export class AddProductComponent {
       // Continúa con el procesamiento del archivo aquí
 
       const reader = new FileReader();
-    reader.onloadend = () => {
-      const base64String = reader.result?.toString().split(',')[1] || '';
-      // Aquí tienes el contenido de la imagen en base64 sin información adicional
-      console.log("IMAGEN EN BASE64: " + base64String);
-      this.imgeToSend = base64String;
-    };
-    reader.readAsDataURL(file);
+      reader.onloadend = () => {
+        const base64String = reader.result?.toString().split(',')[1] || '';
+        // Aquí tienes el contenido de la imagen en base64 sin información adicional
+        console.log("IMAGEN EN BASE64: " + base64String);
+        this.imgeToSend = base64String;
+      };
+      reader.readAsDataURL(file);
 
       console.log("IMAGEN GUARDADA " + this.imgeToSend)
     }
@@ -116,6 +118,7 @@ export class AddProductComponent {
               verticalPosition: 'bottom',
               panelClass: 'success-snackbar'
             });
+            this.router.navigate(['/login']);
           }
         }
         );

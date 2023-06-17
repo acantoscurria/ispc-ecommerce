@@ -27,8 +27,6 @@ export class ProductsService {
     })
   };
 
-
-
   addProduct(name: string, price: number, category: string, code: string, image: any, stock?: number) {
     const payload = {
       marca: name,
@@ -41,5 +39,23 @@ export class ProductsService {
 
     return this.http.post<AddProductDto>(this.url_api + '/api/tienda/bebida/', payload, this.httpOptions);
   }
+
+  deleteProduct(id: number) {
+    return this.http.delete(this.url_api + '/api/tienda/bebida/' + id, this.httpOptions);
+  }
+
+  updateProduct(id?: number, name?: string, price?: number, category?: string, code?: string, image?: any, stock?: number) {
+    const payload = {
+      marca: name,
+      precio: price,
+      id_categoria: category,
+      codigo: code,
+      imagen: image,
+      stock: stock
+    };
+
+    return this.http.patch(this.url_api + '/api/tienda/bebida/' + id, payload, this.httpOptions);
+  }
+
 
 }

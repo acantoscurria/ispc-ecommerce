@@ -28,3 +28,10 @@ class BebidaModelView(viewsets.ModelViewSet):
     serializer_class = BebidasSerializer
     queryset = Bebidas.objects.all()
     permission_classes = [IsAuthenticated, DjangoModelPermissions]
+
+    def get_permissions(self):
+        if self.action in ('list'):
+            permission_classes = [AllowAny]
+        else:
+            permission_classes = [IsAuthenticated, DjangoModelPermissions]
+        return [permission() for permission in permission_classes]
