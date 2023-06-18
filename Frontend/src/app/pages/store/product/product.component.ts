@@ -18,4 +18,15 @@ export class ProductComponent {
     codigo: '',
   };
 
+  showMenu = false;
+
+
+  toggleMenu() {
+    this.showMenu = !this.showMenu;
+  }
+
+  closeMenu() {
+    this.showMenu = false;
+  }
+
 }

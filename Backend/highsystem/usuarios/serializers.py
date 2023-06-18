@@ -3,18 +3,26 @@ from django.contrib.auth import get_user_model
 from django.contrib.auth.hashers import make_password
 
 class UserSerializer(serializers.ModelSerializer):
-    email = serializers.EmailField(
-        required=True)
-    username = serializers.CharField(
-        required=True)
-    password = serializers.CharField(
-        min_length=8)
-
+    username = serializers.CharField(required=True)
+    first_name = serializers.CharField(required=True)
+    last_name = serializers.CharField(required=True)
     class Meta:
         model = get_user_model()
-        fields = ('email', 'username', 'password')
-    def validate_password(self, value):
-        return make_password(value)
+        exclude = (
+            'is_superuser', 
+            'is_staff', 
+            'groups', 
+            'user_permissions', 
+            'last_login', 
+            'date_joined', 
+            'is_active'
+            )
+        
+    def create(self, validated_data):
+        validated_data['password'] = make_password(validated_data.get('password'))
+        return super().create(validated_data)
+
+
 
 
 
