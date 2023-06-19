@@ -2,6 +2,8 @@ from rest_framework import serializers
 from django.contrib.auth import get_user_model
 from django.contrib.auth.hashers import make_password
 from .models import Pedido, Carrito, Bebidas, Categoria
+from drf_extra_fields.fields import Base64ImageField
+
 
 class UserSerializer(serializers.ModelSerializer):
     email = serializers.EmailField(
@@ -23,6 +25,8 @@ class CarritoSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 class BebidasSerializer(serializers.ModelSerializer):
+    imagen = Base64ImageField(required=False)
+
     class Meta:
         model = Bebidas
         fields = '__all__'

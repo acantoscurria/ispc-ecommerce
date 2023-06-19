@@ -16,12 +16,14 @@ export class TokenInterceptor implements HttpInterceptor {
   ) {}
 
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
+    console.log("INterceptor: "+this.tokenService.getToken())
     request = this.addToken(request);
     return next.handle(request);
   }
 
   private addToken(request: HttpRequest<any>) {
     const token  = this.tokenService.getToken();
+    console.log("INterceptor: Bearer "+token);
     if (token) {
       const authRequest = request.clone({
         headers: request.headers.set('Authorization', 'Bearer ' + token)

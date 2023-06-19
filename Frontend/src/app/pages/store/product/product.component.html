@@ -1,9 +1,19 @@
 <div class="product-card">
-  <img class="product-image" src="{{product.image}}" alt="Product Image">
+  <img class="product-image" src="{{product.imagen}}" alt="Product Image">
   <div class="product-details">
-    <h4 class="product-name">{{ product.title }}</h4>
-    <p class="product-description">{{product.description}}</p>
-    <div class="product-price">{{product.price}}</div>
-    <button class="btn btn-primary">Add to Cart</button>
+    <h4 class="product-name">{{ product.marca }}</h4>
+    <p class="product-description">{{product.descripcion}}</p>
+    <div class="product-price">{{product.precio}}</div>
+    <button class="btn btn-primary">Agregar al carrito</button>
+    <button class="btn btn-secondary ml-2" (click)="toggleMenu()">Ver detalle</button>
   </div>
 </div>
+
+
+<div class="sidebar" [ngClass]="{'show': showMenu}">
+  <!-- Contenido del menú lateral -->
+  <!-- Aquí puedes agregar el detalle del producto o cualquier otro contenido -->
+  <p>Detalle del producto</p>
+  <button class="btn btn-secondary" (click)="closeMenu()">Cerrar</button>
+</div>
+

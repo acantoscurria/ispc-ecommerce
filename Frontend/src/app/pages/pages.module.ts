@@ -14,6 +14,8 @@ import { ProductsComponent } from './store/products/products.component';
 import { AddProductComponent } from './dashboard/add-product/add-product.component';
 import { MainDashboardComponent } from './dashboard/main-dashboard/main-dashboard.component';
 import { AddUserComponent } from './dashboard/add-user/add-user.component';
+import { TokenInterceptor } from '../interceptors/token.interceptor';
+import { ListProductsComponent } from './dashboard/list-products/list-products.component';
 
 @NgModule({
   declarations: [
@@ -27,12 +29,16 @@ import { AddUserComponent } from './dashboard/add-user/add-user.component';
     AddProductComponent,
     MainDashboardComponent,
     AddUserComponent,
+    ListProductsComponent,
   ],
   imports: [
     CommonModule,
     PagesRoutingModule,
     LayoutModule,
     ReactiveFormsModule,
+  ],
+  providers: [
+    TokenInterceptor
   ]
 })
 export class PagesModule { }
