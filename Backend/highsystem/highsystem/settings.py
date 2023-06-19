@@ -47,14 +47,11 @@ INSTALLED_APPS = [
     'django_rest_passwordreset',
     'TiendavirtualHS',
     'highsystem',
-<<<<<<< HEAD:Backend/entorno/ecommerce/Scripts/highsystem/highsystem/settings.py
-=======
     'usuarios',
     'rest_framework_simplejwt',
     'drf_spectacular',
     'drf_base64',
     'drf_extra_fields'
->>>>>>> JuanLedesma:Backend/highsystem/highsystem/settings.py
 ]
 
 
@@ -147,34 +144,17 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-<<<<<<< HEAD:Backend/entorno/ecommerce/Scripts/highsystem/highsystem/settings.py
-AUTH_USER_MODEL = 'TiendavirtualHS.CustomUser'
-
-REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES': [
-        'rest_framework.authentication.TokenAuthentication',
-=======
 AUTH_USER_MODEL = 'usuarios.CustomUser'
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework_simplejwt.authentication.JWTAuthentication',
->>>>>>> JuanLedesma:Backend/highsystem/highsystem/settings.py
         'rest_framework.authentication.SessionAuthentication',
     ],
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.IsAuthenticatedOrReadOnly',
         'rest_framework.permissions.IsAuthenticated',
         'rest_framework.permissions.IsAdminUser',
-<<<<<<< HEAD:Backend/entorno/ecommerce/Scripts/highsystem/highsystem/settings.py
-    ]
-  
-}
-
-CORS_ORIGIN_WHITELIST = ["http://localhost:3000"]
-CORS_ALLOW_CREDENTIALS = True
-
-=======
     ],
     'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
     'ACCESS_TOKEN_LIFETIME':  timedelta(minutes=15),
@@ -212,4 +192,3 @@ STATICFILES_DIRS = [BASE_DIR / "static"]
 MEDIA_ROOT = str(BASE_DIR / "media")
 # https://docs.djangoproject.com/en/dev/ref/settings/#media-url
 MEDIA_URL = "/media/"
->>>>>>> JuanLedesma:Backend/highsystem/highsystem/settings.py
