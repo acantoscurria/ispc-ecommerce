@@ -1,0 +1,77 @@
+<app-dashboard-template [navActive]="navActive">
+
+  <div class="col-6 mx-auto">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Agregar nuevo usuario</h5>
+        <hr>
+        <form method="post">
+          <form [formGroup]="addUserForm">
+            <div class="mb-3">
+              <label for="name" class="form-label" >Nombre</label>
+              <input type="text" class="form-control" id="name" formControlName="name">
+              <div *ngIf="Name?.errors && Name?.touched">
+                <div *ngIf="Name?.hasError('required')" class="text-danger">
+                  El nombre es requerido.
+                </div>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="lastname" class="form-label" >Apellido</label>
+              <input type="text" class="form-control" id="lastname" formControlName="lastname">
+              <div *ngIf="LastName?.errors && LastName?.touched">
+                <div *ngIf="LastName?.hasError('required')" class="text-danger">
+                  El apellido es requerido.
+                </div>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" formControlName="email">
+              <div *ngIf="Mail?.errors && Mail?.touched">
+                <div *ngIf="Mail?.hasError('required')" class="text-danger">
+                  El correo electrónico es requerido.
+                </div>
+                <div *ngIf="Mail?.hasError('email')" class="text-danger">
+                  El correo electrónico debe tener un formato válido.
+                </div>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label" >Contraseña</label>
+              <input type="password" class="form-control" id="password" formControlName="password">
+              <div *ngIf="Password?.errors && Password?.touched">
+                <div *ngIf="Password?.hasError('required')" class="text-danger">
+                  La contraseña es requerida.
+                </div>
+                <div *ngIf="Password?.hasError('minlength')" class="text-danger">
+                  La contraseña debe tener al menos 6 caracteres.
+                </div>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="re-password" class="form-label">Repetir contraseña</label>
+              <input type="password" class="form-control" id="re-password">
+            </div>
+            <div class="mb-3">
+              <label for="role" class="form-label" >Rol</label>
+              <input type="text" class="form-control" id="role" formControlName="role">
+              <div *ngIf="Role?.errors && Role?.touched">
+                <div *ngIf="Role?.hasError('required')" class="text-danger">
+                  El rol es requerido.
+                </div>
+              </div>
+            </div>
+          </form>
+          <hr>
+          <div class="text-center">
+
+            <button (click)="enviar($event)" class="btn btn-success" type="button"><i class="fas fa-check-circle mr-2 "></i>Guardar</button>
+            <a href="" class="btn btn-secondary ml-3"><i class="fas fa-times-circle mr-2 "></i>Cancelar</a>
+
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</app-dashboard-template>

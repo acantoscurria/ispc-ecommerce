@@ -1,0 +1,62 @@
+<app-dashboard-template [navActive]="navActive">
+
+  <div class="col-6 mx-auto">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Agregar nuevo producto</h5>
+        <hr>
+
+          <form [formGroup]="addProductForm" (ngSubmit)="addProduct()" >
+            <div class="mb-3">
+              <label for="anme" class="form-label">Nombre de producto</label>
+              <input type="text" class="form-control" id="anme" aria-describedby="product" formControlName="name">
+              <div *ngIf="addProductForm.get('name')?.errors && (addProductForm.get('name')?.dirty || addProductForm.get('name')?.touched)" class="text-danger">
+                <small *ngIf="addProductForm.get('name')?.hasError('required')">Este campo es obligatorio.</small>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="code" class="form-label">Codigo</label>
+              <input type="text" class="form-control" id="code" formControlName="code">
+              <div *ngIf="addProductForm.get('code')?.errors && (addProductForm.get('code')?.dirty || addProductForm.get('code')?.touched)" class="text-danger">
+                <small *ngIf="addProductForm.get('code')?.hasError('required')">Este campo es obligatorio.</small>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="category" class="form-label">Categoría</label>
+              <input type="text" class="form-control" id="category" formControlName="category">
+              <div *ngIf="addProductForm.get('category')?.errors && (addProductForm.get('category')?.dirty || addProductForm.get('category')?.touched)" class="text-danger">
+                <small *ngIf="addProductForm.get('category')?.hasError('required')">Este campo es obligatorio.</small>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="price" class="form-label">Precio</label>
+              <input type="text" class="form-control" id="price"  formControlName="price">
+              <div *ngIf="addProductForm.get('price')?.errors && (addProductForm.get('price')?.dirty || addProductForm.get('price')?.touched)" class="text-danger">
+                <small *ngIf="addProductForm.get('price')?.hasError('required')">Este campo es obligatorio.</small>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="stock" class="form-label">Stock</label>
+              <input type="text" class="form-control" id="stock"  formControlName="stock">
+              <div *ngIf="addProductForm.get('stock')?.errors && (addProductForm.get('stock')?.dirty || addProductForm.get('stock')?.touched)" class="text-danger">
+                <small *ngIf="addProductForm.get('stock')?.hasError('required')">Este campo es obligatorio.</small>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="image" class="form-label">Imágen</label>
+              <input class="form-control" type="file" (change)="imgChange($event)" id="image" formControlName="image">
+              <div *ngIf="addProductForm.get('image')?.errors && (addProductForm.get('image')?.dirty || addProductForm.get('image')?.touched)" class="text-danger">
+                <small *ngIf="addProductForm.get('image')?.hasError('required')">Este campo es obligatorio.</small>
+              </div>
+            </div>
+            <hr>
+            <div class="text-center">
+
+              <button class="btn btn-success"  type="submit"><i class="fas fa-check-circle mr-2 "></i>Guardar</button>
+              <a href="" class="btn btn-secondary ml-3"><i class="fas fa-times-circle mr-2 "></i>Cancelar</a>
+            </div>
+          </form>
+      </div>
+    </div>
+  </div>
+</app-dashboard-template>

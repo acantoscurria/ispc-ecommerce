@@ -1,0 +1,34 @@
+<app-navbar></app-navbar>
+
+<div class="d-flex justify-content-center align-items-center">
+  <div class="card col-lg-5 mt-5">
+    <div class="card-body">
+      <div class="card-title">
+        <hr>
+        <div class="card-img mx-auto" style="width: 150px;">
+          <h3>Login</h3>
+        </div>
+      </div>
+      <hr>
+      <div class="card-title col-lg-10 mx-auto">
+        <p class="text-secondary mb-3">Debe iniciar sesión para acceder al sistema</p>
+        <form [formGroup]="loginForm" (ngSubmit)="login()">
+          <div class="mb-3">
+            <label for="email" class="form-label">Correo electrónico</label>
+            <input type="email" class="form-control" id="email" formControlName="email">
+            <div class="text-danger">{{ getErrorMessage('email') }}</div>
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Contraseña</label>
+            <input type="password" class="form-control" id="password" formControlName="password">
+            <div class="text-danger">{{ getErrorMessage('password') }}</div>
+          </div>
+          <div class="d-grid gap-2">
+            <button type="submit" class="btn btn-primary">Iniciar sesión</button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>
