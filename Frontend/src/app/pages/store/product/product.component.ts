@@ -8,16 +8,25 @@ import { Product } from 'src/app/models/product.model';
 })
 export class ProductComponent {
   @Input() product: Product = {
-    id: 0,
-    price: 0,
-    image: '',
-    title: '',
-    category:'',
-    description: '',
-    rating: {
-      count: 0,
-      rate: 0
-    }
+    id_bebidas: 0,
+    precio: 0,
+    imagen: '',
+    marca: '',
+    id_categoria:'',
+    descripcion: '',
+    stock: 0,
+    codigo: '',
   };
+
+  showMenu = false;
+
+
+  toggleMenu() {
+    this.showMenu = !this.showMenu;
+  }
+
+  closeMenu() {
+    this.showMenu = false;
+  }
 
 }

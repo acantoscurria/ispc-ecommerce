@@ -1,27 +1,22 @@
-from django.urls import path, include
-from .views import LoginView, LogoutView, SignupView, ProfileView, ListarUsuarios, agregarBebidas
+from django.urls import path
+from rest_framework import routers
+from TiendavirtualHS import views as vistas
+from django.conf.urls import include
+from .views import customjsonybajarstock, retornarPagado,CarritoVista
+
+
+router = routers.SimpleRouter()
+router.register('categoria', vistas.CategoriaModelView, basename='Categoria')
+router.register('carrito', vistas.verCarrito, basename='Carrito')
+router.register('pedidos', vistas.verPedido, basename='Pedido')
+router.register('bebida', vistas.BebidaModelView, basename='bebida')
+
 
 urlpatterns = [
     # Auth views
-    path('auth/login/',
-         LoginView.as_view(), name='auth_login'),
 
-    path('auth/logout/',
-         LogoutView.as_view(), name='auth_logout'),
-
-    path('auth/SignupView/',
-         SignupView.as_view(), name='auth_signup'),
-
-     path('auth/reset/',
-         include('django_rest_passwordreset.urls',
-                 namespace='password_reset')),
-
-     path('user/profile/',
-         ProfileView.as_view(), name='user_profile'),
-
-     path('usuarios/',
-         ListarUsuarios.as_view(), name='listar_usuarios'),
-
-     path('agregarproducto/',
-         agregarBebidas.as_view(), name='agregar_Bebidas'),
-]
+    path('', include(router.urls)),
+    path('retornarPagado/', retornarPagado.as_view(), name='retornarPagado'),
+    path('actualizarstock/<int:pk>/<int:cantidad>', customjsonybajarstock.as_view(), name='customjsonybajarstock'), #
+    path('carrito/', CarritoVista.as_view(), name='carritodecompras'),
+]         

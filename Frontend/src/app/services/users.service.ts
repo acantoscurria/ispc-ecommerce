@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class UsersService {
 
-  private api_url = 'https://fakestoreapi.com/users';
+  private api_url = 'http://localhost:8000';
 
   constructor( private http: HttpClient) { }
 
@@ -22,11 +22,15 @@ export class UsersService {
   // }
 
   createUser(user: CreateUserDto) {
-    return this.http.post<User>(this.api_url, user);
+    return this.http.post<User>(`${this.api_url}/api/usuarios/usuarios/`, user);
   }
 
   getAllUsers() {
-    return this.http.get<User[]>(this.api_url);
+    return this.http.get<User[]>(`${this.api_url}`);
+  }
+
+  getUserById(id: number) {
+    return this.http.get<User>(`${this.api_url}/${id}`);
   }
 
 

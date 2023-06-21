@@ -1,0 +1,2 @@
+include Frontend/.gitignore
+include Backend/highsystem/.gitignore

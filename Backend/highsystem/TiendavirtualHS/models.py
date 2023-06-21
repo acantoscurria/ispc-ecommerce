@@ -1,44 +1,8 @@
 from django.db import models
-from django.contrib.auth.hashers import make_password
-from django.db.models import Max
-from django.contrib.auth.models import AbstractUser
-from django.conf import settings
+from usuarios.models import Cliente
 
 # Create your models here.
 
-class CustomUser(AbstractUser):
-    email = models.EmailField(max_length=150, unique=True)
-    USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = ['username', 'password']
-
-
-class Cliente(models.Model):
-    id_cliente = models.AutoField(primary_key=True)
-    id_usuario = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-    password = models.CharField(max_length=128, default='my_default_password')
-    telefono = models.CharField(max_length=45, null=True,editable=True)
-    direccion = models.TextField(blank=False, editable=True)
-
-    class meta:
-        db_table="Cliente"
-        verbose_name= "Tipo de usuario cliente"
-        verbose_name_plural= "Clientes"
-
-
-class Administrador(models.Model):
-    id_administrador=models.AutoField(primary_key=True)
-    id_usuario = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
-
-    class meta:
-        db_table="Administrador"
-        verbose_name= "Tipo de usuario administrador"
-        verbose_name_plural= "Administradores"
-
-    
-    #def save(self, *args, **kwargs):
-     #   self.password = make_password(self.password)
-      #  super().save(*args, **kwargs)
-      #  
 class Carrito(models.Model):
     id_carrito= models.AutoField(primary_key=True)
     id_cliente = models.ForeignKey(Cliente, on_delete=models.CASCADE)
@@ -73,11 +37,15 @@ class Bebidas(models.Model):
     id_categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)
     imagen = models.ImageField(null=True, blank=True, upload_to="bebidas/", editable=True)
     descripcion = models.TextField(null=True, blank= True, editable=True)
+    codigo = models.CharField(max_length=45, blank=False, null=True)
 
     class meta:
         db_table="Bebidas"
         verbose_name= "Producto bebida"
         verbose_name_plural= "Bebidas"
+
+    def __str__(self):
+        return self.marca
 
 class Pedido(models.Model):
     id_pedido= models.AutoField(primary_key=True)

@@ -8,6 +8,7 @@ import { StoreComponent } from './pages/store/store.component';
 import { AddProductComponent } from './pages/dashboard/add-product/add-product.component';
 import { MainDashboardComponent } from './pages/dashboard/main-dashboard/main-dashboard.component';
 import { AddUserComponent } from './pages/dashboard/add-user/add-user.component';
+import { ListProductsComponent } from './pages/dashboard/list-products/list-products.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
@@ -17,6 +18,8 @@ const routes: Routes = [
   {path:'dashboard',component:MainDashboardComponent},
   {path:'dashboard/add-product',component:AddProductComponent},
   {path:'dashboard/add-user',component:AddUserComponent},
+  {path:'dashboard/list-products',component:ListProductsComponent},
+
 
 ];
 
