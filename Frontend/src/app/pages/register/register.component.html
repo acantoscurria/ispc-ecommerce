@@ -5,46 +5,40 @@
     <div class="card-body">
       <div class="card-title">
         <hr>
-        <div class="card-img text-center" >
+        <div class="card-img text-center">
           <h3>Registro de usuario</h3>
         </div>
       </div>
       <hr>
-      <div class="card-title col-lg-10 mx-auto">
-        <div class="mb-3">
-          <label for="username" class="form-label text-secondary">Nombre de usuario</label>
-          <input type="text" class="form-control" id="username" aria-describedby="emailHelp">
+      <form [formGroup]="createUserForm" (ngSubmit)="createUser()">
+        <div class="card-title col-lg-10 mx-auto">
+          <div class="mb-3">
+            <label for="username" class="form-label text-secondary">Nombre de usuario</label>
+            <input formControlName="username" type="text" class="form-control" id="username" aria-describedby="emailHelp">
+          </div>
+          <div class="mb-3">
+            <label for="name" class="form-label text-secondary">Nombre</label>
+            <input formControlName="first_name" type="text" class="form-control" id="name" aria-describedby="emailHelp">
+          </div>
+          <div class="mb-3">
+            <label for="surname" class="form-label text-secondary">Apellido</label>
+            <input formControlName="last_name" type="text" class="form-control" id="surname" aria-describedby="emailHelp">
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label text-secondary">Email</label>
+            <input formControlName="email" type="email" class="form-control" id="email" aria-describedby="emailHelp">
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label text-secondary">Contraseña</label>
+            <input formControlName="password" type="password" class="form-control" id="password">
+          </div>
+          <div class="d-grid gap-2 text-center">
+            <hr>
+            <a name="" id="" class="btn btn-outline-danger" href="" role="button">Volver a Inicio</a>
+            <button type="submit" class="btn btn-primary">Registrarse</button>
+          </div>
         </div>
-        <div class="mb-3">
-          <label for="name" class="form-label text-secondary">Nombre</label>
-          <input type="text" class="form-control" id="name" aria-describedby="emailHelp">
-        </div>
-        <div class="mb-3">
-          <label for="surname" class="form-label text-secondary">Apellido</label>
-          <input type="text" class="form-control" id="surname" aria-describedby="emailHelp">
-        </div>
-        <div class="mb-3">
-          <label for="email" class="form-label text-secondary">Email</label>
-          <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
-        </div>
-        <div class="mb-3">
-          <label for="dni" class="form-label text-secondary">Dni</label>
-          <input type="text" class="form-control" id="dni" aria-describedby="emailHelp">
-        </div>
-        <div class="mb-3">
-          <label for="password" class="form-label text-secondary">Contraseña</label>
-          <input type="password" class="form-control" id="password">
-        </div>
-        <div class="mb-3">
-          <label for="repeat-passord" class="form-label text-secondary">Repetir contraseña</label>
-          <input type="password" class="form-control" id="repeat-passord">
-        </div>
-        <div class="d-grid gap-2 text-center">
-          <hr>
-          <a name="" id="" class="btn btn-outline-danger" href="" role="button">Volver a Inicio</a>
-          <button type="submit" class="btn btn-primary">Registrarse</button>
-        </div>
-      </div>
+      </form>
     </div>
   </div>
 </div>
