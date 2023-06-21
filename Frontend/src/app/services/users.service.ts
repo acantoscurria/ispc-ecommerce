@@ -22,7 +22,7 @@ export class UsersService {
   // }
 
   createUser(user: CreateUserDto) {
-    return this.http.post<User>(`${this.api_url}/auth/SingupView/`, user);
+    return this.http.post<User>(`${this.api_url}/api/usuarios/usuarios/`, user);
   }
 
   getAllUsers() {
